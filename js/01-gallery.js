@@ -3,8 +3,7 @@ import { galleryItems } from './gallery-items.js';
 
 const listImages = document.querySelector(".gallery");
 
-const imagesMarcup = creatImagesList(galleryItems);
-listImages.insertAdjacentHTML('beforeend', imagesMarcup);
+creatImagesList(galleryItems);
 
 function creatImagesList(images) {
     const markup = images.map(({ original, preview, description }) => {
@@ -37,7 +36,7 @@ console.log(evt.target)
 
     const largeImgUrl = target.dataset.source;
 
-    const instance = basicLightBox.create(`<img src="${largeImgUrl}" width="800" height="600"/>`);
+    const instance = basicLightbox.create(`<img src="${largeImgUrl}" width="800" height="600"/>`);
 
     instance.show();
 
