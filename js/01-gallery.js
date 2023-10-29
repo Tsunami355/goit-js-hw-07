@@ -3,6 +3,9 @@ import { galleryItems } from './gallery-items.js';
 
 const listImages = document.querySelector(".gallery");
 
+const imagesMarcup = creatImagesList(galleryItems);
+listImages.insertAdjacentHTML('beforeend', imagesMarcup);
+
 function creatImagesList(images) {
     const markup = images.map(({ original, preview, description }) => {
             return `<li class="gallery__item">
